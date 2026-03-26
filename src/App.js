@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import './Reset.css';
+import './Tokens.css';
+import './Style.css';
+import './Theme.css';
+import './Components.css';
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// PAGES
+import Landing from "./pages/Home";
+import Shop from "./pages/Shop";
+import Approach from "./pages/Approach";
+import Ambassador from "./pages/Ambassador";
+import About from "./pages/About";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter basename="/py-kickstarter">
+      <Header />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Landing />} /> 
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/approach" element={<Approach />} />
+        <Route path="/ambassador" element={<Ambassador />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
-
-export default App;
