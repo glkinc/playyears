@@ -10,7 +10,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
 import Landing from "./pages/Home";
@@ -23,7 +23,7 @@ import Privacy from "./pages/Privacy";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/py-kickstarter">
+    <Router>
       <Header />
       <ScrollToTop />
       <Routes>
