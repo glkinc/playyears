@@ -20,6 +20,7 @@ import Ambassador from "./pages/Ambassador";
 import About from "./pages/About";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import Giveaway from "./pages/Giveaway";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/giveaway" element={<Giveaway />} />
       </Routes>
 
       <Footer />
