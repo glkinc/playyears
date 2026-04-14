@@ -24,6 +24,11 @@ const Givea = () => {
                 </ul>
               </div>
 
+              <img
+                src={process.env.PUBLIC_URL + "/images/giveaway-banner.png"}
+                alt="Giveaway prize"
+              />
+
               <p className="body-sm"><strong>Terms:</strong> One entry per family. No purchase necessary. Prize has no cash value. Giveaway open to residents of Canada. Winner will be notified by email.</p>
 
               <div className="flex-container flex-row gap-xs">
