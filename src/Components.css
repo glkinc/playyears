@@ -164,6 +164,7 @@ form {
   align-items: stretch;
 }
 
+form input[type="text"],
 form input[type="email"] {
   flex: 1;
   padding: 1.6rem 2.4rem;

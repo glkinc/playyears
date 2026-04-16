@@ -1,6 +1,4 @@
 // src/pages/Ambassador.js
-import React from "react";
-
 const Ambassador = () => {
   return (
     <>

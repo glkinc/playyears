@@ -1,8 +1,11 @@
 // src/components/Footer.js
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState(null); // null | "success" | "error"
 
@@ -15,6 +18,7 @@ export default function Footer() {
 
     // Create form data
     const data = new FormData();
+    data.append("FIRSTNAME", firstName);
     data.append("EMAIL", email);
     data.append("email_address_check", "");
     data.append("locale", "en");
@@ -25,7 +29,7 @@ export default function Footer() {
       body: data,
       mode: "no-cors", // Brevo doesn't return JSON to client-side
     });
-    setStatus("success");
+    navigate("/thanks", { state: { fromForm: true } });
     setEmail("");
   } catch (err) {
     setStatus("error");
@@ -46,8 +50,16 @@ export default function Footer() {
           <div className="mailing-list-form">
             <form onSubmit={handleSubmit} className="newsletter-form">
               <input
+                type="text"
+                placeholder="First name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+                className="newsletter-input"
+              />
+              <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -58,7 +70,6 @@ export default function Footer() {
               </button>
             </form>
 
-            {status === "success" && <p className="newsletter-success">Thanks for subscribing!</p>}
             {status === "error" && <p className="newsletter-error">Something went wrong. Please try again.</p>}
           </div>
         </div>

@@ -21,6 +21,7 @@ import About from "./pages/About";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Giveaway from "./pages/Giveaway";
+import Thanks from "./pages/Thanks";
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/giveaway" element={<Giveaway />} />
+        <Route path="/thanks" element={<Thanks />} />
       </Routes>
 
       <Footer />

@@ -1,6 +1,4 @@
 // src/pages/Returns.js
-import React from "react";
-
 const Returns = () => {
   return (
     <>

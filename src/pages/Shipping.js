@@ -1,6 +1,4 @@
 // src/pages/Shipping.js
-import React from "react";
-
 const Shipping = () => {
   return (
     <>

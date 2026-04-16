@@ -1,6 +1,4 @@
 // src/pages/Terms.js
-import React from "react";
-
 const Terms = () => {
   return (
     <>

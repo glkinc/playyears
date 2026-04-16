@@ -1,7 +1,5 @@
 // src/pages/Giveaway.js
-import React from "react";
-
-const Givea = () => {
+const Giveaway = () => {
   return (
     <>
     <section className="main padding-top-2xl padding-bottom-2xl bg-primary">
@@ -48,4 +46,4 @@ const Givea = () => {
   );
 };
 
-export default Givea;
+export default Giveaway;

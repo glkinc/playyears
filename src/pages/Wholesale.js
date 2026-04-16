@@ -1,6 +1,4 @@
 // src/pages/Wholesale.js
-import React from "react";
-
 const Wholesale = () => {
   return (
     <>

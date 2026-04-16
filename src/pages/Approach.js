@@ -1,6 +1,4 @@
 // src/pages/Approach.js
-import React from "react";
-
 const Approach = () => {
   return (
     <>
