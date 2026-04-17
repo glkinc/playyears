@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function MailingListModal({ open, onClose }) {
+  const navigate = useNavigate();
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState(null);
 
@@ -11,7 +14,8 @@ export default function MailingListModal({ open, onClose }) {
       "https://1b482e2f.sibforms.com/serve/MUIFAEAyijIOIumZHVu0lNkY3E9IEmRIeK8UvCXrlepWYkUYxRDC1jiWtD05ApWkS-1iy8vJ2GNUuGgSacGLAEdLySTnCOXZb0RbpMmu86dEPZOYF5MR7ILCJVnzFNLktageZ4W8ABeWwR5yM4HY_NKfeYxYe3Ln-JCLfJT3KC2hGPVKkNRwphUFFWhnZ9EBvCltm2shFClKqNXH";
 
     const data = new FormData();
-    data.append("EMAIL", email);
+    data.append("EMAIL", firstName);
+    data.append("FIRSTNAME", email);
     data.append("email_address_check", "");
     data.append("locale", "en");
 
@@ -21,7 +25,7 @@ export default function MailingListModal({ open, onClose }) {
         body: data,
         mode: "no-cors",
       });
-      setStatus("success");
+      navigate("/thanks", { state: { fromForm: true } });
       setEmail("");
     } catch {
       setStatus("error");
@@ -62,6 +66,14 @@ export default function MailingListModal({ open, onClose }) {
 
             <form onSubmit={handleSubmit} className="modal-form">
               <input
+                type="text"
+                placeholder="First name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+                className="newsletter-input"
+              />
+              <input
                 type="email"
                 value={email}
                 placeholder="Your email"
@@ -71,7 +83,6 @@ export default function MailingListModal({ open, onClose }) {
               <button type="submit">Subscribe</button>
             </form>
 
-            {status === "success" && <p>Thanks for subscribing!</p>}
             {status === "error" && <p>Something went wrong.</p>}
           </div>
         </div>

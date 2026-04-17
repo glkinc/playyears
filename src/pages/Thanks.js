@@ -18,21 +18,26 @@ export default function Thanks() {
             
             <div className="col-lg-8">
               <div className="flex-container flex-col gap-lg">
-                <div className="flex-container flex-col gap-sm">
-                  <div className="flex-container flex-col gap-xxs">
-                    <h1 className="body-lg weight-500 text-highlight-secondary">You're subscribed!</h1>
-                    <span className="heading heading-xl">Thanks for Subscribing</span>
+
+                <div className="flex-container flex-row gap-md items-center wrap-xs wrap-sm">
+                  <div className="flex-container flex-col gap-sm">
+                    <div className="flex-container flex-col gap-xxs">
+                      <h1 className="heading heading-xl">Thanks for Subscribing!</h1>
+                    </div>
+
+                    <p className="body-lg">Thank you for entering the baby library giveaway.</p>
+                    <p>We will be announcing the winner, <strong>Monday April 20th</strong>.<br />
+                    Follow us for play ideas <a href="https://instagram.com/shopplayyears/" className="text-highlight-secondary" target="_blank" rel="noreferrer">@shopplayyears</a></p>
                   </div>
-                  <p className="body-lg">You have been entered into our <strong>Play Years Giveaway</strong> for 2 Play Years decks + $150 in curated baby books to support your baby's growth in the first year.</p>            
-                  <p>A winner will be notified by email on May 9th, 2026</p>
+
+                  <img
+                    src={process.env.PUBLIC_URL + "/images/thanks-racoon.svg"}
+                    alt="Thanks"
+                    style={{
+                      maxWidth: '24rem'
+                    }}
+                  />
                 </div>
-
-                <img
-                  src={process.env.PUBLIC_URL + "/images/giveaway-banner.png"}
-                  alt="Giveaway prize"
-                />
-                <p className="body-sm"><strong>Terms:</strong> One entry per family. No purchase necessary. Prize has no cash value. Giveaway open to residents of Canada. Winner will be notified by email.</p>
-
               </div>
             </div>
           </div>
