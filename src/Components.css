@@ -181,6 +181,7 @@ form input[type="email"] {
   border: 2px solid var(--form-input-background);
 }
 
+form input[type="text"]:focus,
 form input[type="email"]:focus {
   border: 2px solid var(--focus-outline);
 }
@@ -197,6 +198,7 @@ form button {
         flex-direction: row;
     }
 
+    form input[type="text"],
     form input[type="email"] {
         padding: 1.2rem 1.6rem;
         height: 4.8rem;
@@ -214,6 +216,7 @@ form button {
         flex-direction: column;
     }
 
+    form input[type="text"],
     form input[type="email"] {
         padding: 1.2rem 1.6rem;
         height: 4.8rem;
