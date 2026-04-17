@@ -164,6 +164,10 @@ form {
   align-items: stretch;
 }
 
+form.modal-form {
+    flex-direction: column;
+}
+
 form input[type="text"],
 form input[type="email"] {
   flex: 1;
