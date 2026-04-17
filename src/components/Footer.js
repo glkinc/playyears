@@ -30,6 +30,7 @@ export default function Footer() {
       mode: "no-cors", // Brevo doesn't return JSON to client-side
     });
     navigate("/thanks", { state: { fromForm: true } });
+    setFirstName("");
     setEmail("");
   } catch (err) {
     setStatus("error");

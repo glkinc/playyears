@@ -14,8 +14,8 @@ export default function MailingListModal({ open, onClose }) {
       "https://1b482e2f.sibforms.com/serve/MUIFAEAyijIOIumZHVu0lNkY3E9IEmRIeK8UvCXrlepWYkUYxRDC1jiWtD05ApWkS-1iy8vJ2GNUuGgSacGLAEdLySTnCOXZb0RbpMmu86dEPZOYF5MR7ILCJVnzFNLktageZ4W8ABeWwR5yM4HY_NKfeYxYe3Ln-JCLfJT3KC2hGPVKkNRwphUFFWhnZ9EBvCltm2shFClKqNXH";
 
     const data = new FormData();
-    data.append("EMAIL", firstName);
-    data.append("FIRSTNAME", email);
+    data.append("EMAIL", email);
+    data.append("FIRSTNAME", firstName);
     data.append("email_address_check", "");
     data.append("locale", "en");
 
@@ -26,6 +26,7 @@ export default function MailingListModal({ open, onClose }) {
         mode: "no-cors",
       });
       navigate("/thanks", { state: { fromForm: true } });
+      setFirstName("");
       setEmail("");
     } catch {
       setStatus("error");
