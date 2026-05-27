@@ -1,95 +1,95 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import HomeContent from '@/components/HomeContent'
 
-export default function Home() {
+export async function generateMetadata() {
+  return {
+    title: 'Play Years | Activity cards for babies 0-12 months',
+    description:
+      'Co-created with early childhood experts, the Play Years™ First-Year Deck gives you research-backed ways to play with your baby. So you always know what to do—and why it matters.',
+    openGraph: {
+      title: 'Play Years | Activity cards for babies 0-12 months',
+      description:
+        'Co-created with early childhood experts, the Play Years™ First-Year Deck gives you research-backed ways to play with your baby.',
+      images: [
+        {
+          url: '/images/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Play Years First-Year Deck — Activity cards for babies 0-12 months',
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Play Years | Activity cards for babies 0-12 months',
+      description:
+        'Research-backed activity cards to help your baby learn through play in the first year.',
+      images: ['/images/og-image.png'],
+    },
+  }
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Play Years Inc.',
+  url: 'https://playyears.com',
+  logo: 'https://playyears.com/images/logo.svg',
+  sameAs: ['https://instagram.com/shopplayyears/'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'hello@theplayyears.com',
+    contactType: 'customer support',
+  },
+}
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Play Years™ First-Year Deck',
+  description:
+    '50 research-backed activity cards for babies 0–12 months. Organized by developmental skill area — sensory, language, motor, cognitive, and social-emotional. Co-created with early childhood experts.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Play Years',
+  },
+  image: [
+    'https://playyears.com/images/product-shot.jpg',
+    'https://playwears.com/images/product-shot-alt.jpg',
+  ],
+  audience: {
+    '@type': 'PeopleAudience',
+    suggestedMinAge: 0,
+    suggestedMaxAge: 1,
+  },
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/PreOrder',
+    priceCurrency: 'CAD',
+    seller: {
+      '@type': 'Organization',
+      name: 'Play Years Inc.',
+    },
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '3',
+  },
+}
+
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <HomeContent />
+    </>
+  )
 }
