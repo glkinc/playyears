@@ -24,8 +24,8 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-          <div className="col-lg-8 text-center">
-            <a href="mailto:hello@theplayyears.com" className="heading heading-lg text-highlight-secondary">
+          <div className="col-lg-8">
+            <a href="mailto:hello@theplayyears.com" className="heading heading-md text-highlight-secondary">
               hello@theplayyears.com
             </a>
           </div>
