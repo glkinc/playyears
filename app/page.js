@@ -33,8 +33,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Play Years Inc.',
-  url: 'https://playyears.com',
-  logo: 'https://playyears.com/images/logo.svg',
+  url: 'https://theplayyears.com',
+  logo: 'https://theplayyears.com/images/logo.svg',
   sameAs: ['https://instagram.com/shopplayyears/'],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -54,8 +54,8 @@ const productSchema = {
     name: 'Play Years',
   },
   image: [
-    'https://playyears.com/images/product-shot.jpg',
-    'https://playwears.com/images/product-shot-alt.jpg',
+    'https://theplayyears.com/images/product-shot.jpg',
+    'https://theplayyears.com/images/product-shot-alt.jpg',
   ],
   audience: {
     '@type': 'PeopleAudience',

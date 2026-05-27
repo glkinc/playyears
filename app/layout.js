@@ -8,7 +8,7 @@ import '@/styles/Components.css'
 import './globals.css'
 
 export const metadata = {
-  metadataBase: new URL('https://playyears.com'),
+  metadataBase: new URL('https://theplayyears.com'),
   title: {
     default: 'Play Years | Activity cards for babies 0-12 months',
     template: '%s | Play Years',
@@ -20,7 +20,7 @@ export const metadata = {
     description:
       'Co-created with early childhood experts, the Play Years™ First-Year Deck gives you research-backed ways to play with your baby.',
     images: ['/images/og-image.png'],
-    url: 'https://playyears.com',
+    url: 'https://theplayyears.com',
     type: 'website',
   },
 }
