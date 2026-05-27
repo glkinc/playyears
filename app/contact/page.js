@@ -1,5 +1,3 @@
-import ContactForm from '@/components/ContactForm'
-
 export const metadata = {
   title: 'Contact',
   description: 'Have a question? Get in touch with the Play Years team.',
@@ -21,19 +19,15 @@ export default function ContactPage() {
                 <span className="heading heading-xl">Have a Question?</span>
               </div>
               <p className="body-lg">
-                We're here to help! Whether you have a question about our product, need support with your order,
-                or just want to share feedback — we'd love to hear from you.
-                Fill out the form below and we'll get back to you within 1-2 business days.
+                We're here to help! Whether you have a question about our product, need support with
+                your order, or just want to share feedback — we'd love to hear from you.
               </p>
             </div>
           </div>
-          <div className="narrow">
-            <ContactForm />
-          </div>
           <div className="col-lg-8 text-center">
-            <p>You can also reach us directly at{' '}
-              <a href="mailto:hello@theplayyears.com" className="text-highlight-secondary">hello@theplayyears.com</a>.
-            </p>
+            <a href="mailto:hello@theplayyears.com" className="heading heading-lg text-highlight-secondary">
+              hello@theplayyears.com
+            </a>
           </div>
         </div>
       </div>

@@ -12,9 +12,14 @@ const ContactForm = () => {
     const formData = new FormData(e.target)
 
     try {
-      const response = await fetch('https://theplayyears.com/sendMail.php', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          message: formData.get('message'),
+        }),
       })
 
       const text = await response.text()

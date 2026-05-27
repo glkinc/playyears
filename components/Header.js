@@ -18,7 +18,7 @@ export default function Header() {
       <div className="top-bar amazon">
         <div className="content">
           <div className="flex-container flex-row gap-sm items-center justify-center">
-            <p><a href="https://amazon.ca/dp/B0H2XFJKGG" target="_blank" rel="noreferrer">Now available on Amazon</a></p><img src="/images/amazon-logo.png" alt="Amazon" />
+            <p><a href="https://amazon.ca/dp/B0H2XFJKGG" target="_blank" rel="noreferrer">Now available on Amazon</a></p>
           </div>
         </div>
       </div>
