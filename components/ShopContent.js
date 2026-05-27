@@ -79,7 +79,7 @@ const ShopContent = () => {
                 <p>The Play Years™ First-Year Activity Deck includes 50 research-backed activities for learning through play from birth to 12 months. Created with early childhood educators, each card helps you support your baby's development and strengthen your connection through play.</p>
                 <div className="flex-container items-center flex-row gap-sm">
                   <a href="https://amazon.ca/dp/B0H2XFJKGG" target="_blank" rel="noreferrer" className="btn">
-                    $27.99 CAD – Buy Now
+                    Buy Now on Amazon
                   </a>
                   <span className="text-sm weight-500 text-in-stock" style={{ display: 'none' }}>
                     In stock

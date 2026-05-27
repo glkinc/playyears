@@ -77,7 +77,7 @@ const HomeContent = () => {
                 <div className="flex-container flex-col gap-md wrap-sm wrap-xs">
                   <p>Babies learn through play. Each card offers a research-backed activity to support your baby's growth in the first year.</p>
                   <div className="flex-container flex-row gap-sm">
-                    <a href="https://amazon.ca/dp/B0H2XFJKGG" target="_blank" rel="noreferrer" className="btn">Buy on Amazon</a>
+                    <a href="https://amazon.ca/dp/B0H2XFJKGG" target="_blank" rel="noreferrer" className="btn">Now Buy on Amazon</a>
                     <button className="btn btn-tertiary" onClick={() => setShowModal(true)}>Join Mailing List</button>
                   </div>
                 </div>
