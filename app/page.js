@@ -65,10 +65,31 @@ const productSchema = {
   offers: {
     '@type': 'Offer',
     availability: 'https://schema.org/PreOrder',
+    price: '28.99',
     priceCurrency: 'CAD',
     seller: {
       '@type': 'Organization',
       name: 'Play Years Inc.',
+    },
+    shippingDetails: {
+      '@type': 'OfferShippingDetails',
+      shippingRate: {
+        '@type': 'MonetaryAmount',
+        value: '0',
+        currency: 'CAD',
+      },
+      shippingDestination: [
+        { '@type': 'DefinedRegion', addressCountry: 'CA' },
+        { '@type': 'DefinedRegion', addressCountry: 'US' },
+      ],
+    },
+    hasMerchantReturnPolicy: {
+      '@type': 'MerchantReturnPolicy',
+      applicableCountry: ['CA', 'US'],
+      returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+      merchantReturnDays: 30,
+      returnMethod: 'https://schema.org/ReturnByMail',
+      returnFees: 'https://schema.org/FreeReturn',
     },
   },
   aggregateRating: {
