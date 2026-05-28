@@ -13,21 +13,21 @@ export default function ContactPage() {
       <div className="content">
         <div className="flex-container flex-col gap-xl items-center">
           <div className="col-lg-8">
-            <div className="flex-container flex-col gap-sm text-center">
-              <div className="flex-container flex-col gap-xxs">
-                <h1 className="body-lg weight-500 text-highlight-secondary">Contact Us</h1>
-                <span className="heading heading-xl">Have a Question?</span>
+            <div className="flex-container flex-col gap-xl">
+              <div className="flex-container flex-col gap-sm">
+                <div className="flex-container flex-col gap-xxs">
+                  <h1 className="body-lg weight-500 text-highlight-secondary">Contact Us</h1>
+                  <span className="heading heading-xl">Have a Question?</span>
+                </div>
+                <p className="body-lg">
+                  We're here to help! Whether you have a question about our product, need support with
+                  your order, or just want to share feedback — we'd love to hear from you.
+                </p>
               </div>
-              <p className="body-lg">
-                We're here to help! Whether you have a question about our product, need support with
-                your order, or just want to share feedback — we'd love to hear from you.
-              </p>
+              <a href="mailto:hello@theplayyears.com" className="heading heading-md text-highlight-secondary">
+                hello@theplayyears.com
+              </a>
             </div>
-          </div>
-          <div className="col-lg-8">
-            <a href="mailto:hello@theplayyears.com" className="heading heading-md text-highlight-secondary">
-              hello@theplayyears.com
-            </a>
           </div>
         </div>
       </div>
